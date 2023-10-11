@@ -19,14 +19,14 @@ universal_binaries:
 
 brews:
   -
-    name: askcloudhelloworld
+    name: elsadata
     homepage: https://github.com/elsa-data/aws-command-cli
     tap:
-      owner: askcloudarchitech
-      name: homebrew-askcloudarchitech
+      owner: elsadata
+      name: homebrew-elsadata
     commit_author:
-      name: gmorse81
-      email: gmorse81@gmail.com
+      name: andrew
+      email: an email
 
 checksum:
   name_template: 'checksums.txt'
