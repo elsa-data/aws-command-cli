@@ -1,0 +1,32 @@
+builds:
+  - binary: elsa-data-cli
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm64
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -mod=vendor
+
+release:
+  prerelease: auto
+
+universal_binaries:
+  - replace: true
+
+brews:
+  -
+    name: elsadata
+    homepage: https://github.com/elsa-data/aws-command-cli
+    tap:
+      owner: elsadata
+      name: homebrew-elsadata
+    commit_author:
+      name: andrew
+      email: an email
+
+checksum:
+  name_template: 'checksums.txt'

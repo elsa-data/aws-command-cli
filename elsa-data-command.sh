@@ -66,6 +66,9 @@ aws lambda invoke --function-name "$LAMBDA_ARN" \
 LG=$(jq <"$temp_file" -r '.logGroupName')
 LS=$(jq <"$temp_file" -r '.logStreamName')
 
+echo $LG
+echo $LS
+
 # and now we can print the log output (which is the admin command output)
 aws logs tail "$LG" --log-stream-names "$LS" | cut -d' ' -f3-
 
